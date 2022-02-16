@@ -12,9 +12,30 @@ long nCr(int n, int r);
 Do not modify the main function.*/
 
 #include <iostream>
-
 long Factorial(int no);
 long nCr(int n, int r);
+
+long Factorial(int no)
+{
+  long fac;
+  fac = 1;
+
+    for (int r=no; r >= 1; r--) 
+    {
+        fac = fac * r;
+    }
+    return fac;
+}
+
+long nCr(int n, int r)
+{
+  long answer;
+  answer =  Factorial(n) /  (Factorial(r) *  Factorial(n - r));
+  return answer;
+
+}
+
+
 
 int main() {
   int n, r;
